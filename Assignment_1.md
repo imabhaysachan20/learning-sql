@@ -107,32 +107,8 @@ LIMIT 10000;
 
 ---
 
+
 ## 4. Commit Strategy
-
-### Idea
-Commit after each batch instead of one large commit at the end.
-
-### Example
-job_checkpoint:
-job_name | last_id
-billing_job | 400000
-
-
-Next run:
-
-UPDATE table
-SET status = 'paid'
-WHERE id > 400000
-LIMIT 10000;
-
-
-### Why It Matters
-- Allows precise resume from failure point  
-- Useful when status tracking isn’t available  
-
----
-
-## 5. Commit Strategy
 
 ### Idea
 Commit after each batch instead of one large commit at the end.

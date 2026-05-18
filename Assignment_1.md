@@ -58,7 +58,7 @@ LIMIT 10000;
 
 ---
 
-## Idempotency
+## 2. Idempotency
 
 ### Idea
 Design updates so that **running them multiple times produces the same result**.
@@ -83,7 +83,7 @@ SET amount = amount - 100;
 
 ---
 
-## Checkpoint-Based Recovery
+## 3. Checkpoint-Based Recovery
 
 ### Idea
 Store the **last processed position** (e.g., `last_id`) in a separate table.
@@ -107,7 +107,7 @@ LIMIT 10000;
 
 ---
 
-## Commit Strategy
+## 4. Commit Strategy
 
 ### Idea
 Commit after each batch instead of one large commit at the end.

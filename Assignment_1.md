@@ -1,4 +1,4 @@
-# 📘 Assignment 1: Handling Large-Scale Nightly Billing Jobs
+# Assignment 1: Handling Large-Scale Nightly Billing Jobs
 
 ## Description
 A nightly billing job processes **1 million records** in a database.  
@@ -25,7 +25,7 @@ First run: rows 1 – 10,000 → commit
 Second run: rows 10,001 – 20,000 → commit
 
 
-### 🎯 Why It Matters
+### Why It Matters
 - Reduces risk of full rollback  
 - Improves performance  
 - Ensures partial progress is saved  
@@ -132,7 +132,7 @@ LIMIT 10000;
 
 ---
 
-## 🔹 5. Commit Strategy
+## 5. Commit Strategy
 
 ### Idea
 Commit after each batch instead of one large commit at the end.
